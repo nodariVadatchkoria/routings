@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthorizationService} from "./services/authorization.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routingi';
+
+ constructor(
+   public AuthorizationService: AuthorizationService
+ ) {
+
+ }
+  login() {
+  this.AuthorizationService.login();
+  }
+  logout() {
+    this.AuthorizationService.logout();
+  }
 }
