@@ -20,8 +20,8 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsComponent,
-    canActivate: [ActivateGuard],
-    canActivateChild: [ActivateChildeGuard],
+    // canActivate: [ActivateGuard],
+    // canActivateChild: [ActivateChildeGuard],
     children: [
       {
         path: ':id',
