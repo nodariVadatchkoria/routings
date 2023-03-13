@@ -1,50 +1,58 @@
 
+<!--      <div class="fourth box">-->
+<!--        <button type="button" (click)="f8(e)">aA</button>-->
+<!--        <button type="button" (click)="f9()">-->
+<!--          <fa-icon [icon]="faTextSlash"></fa-icon>-->
+<!--        </button>-->
+<!--        <input type="color" (change)="f10(this)">-->
+<!--      </div>-->
+
+
 <section>
   <div class="row">
     <div class="col">
       <div class="first box">
-        <input id="font-size" type="number" value="16" min="1" max="100" (change)="f1(this)">
+        <input  id="fontSize" type="number" value="16" min="1" max="100" (change)="fontSizeChange()">
       </div>
       <div class="second box">
-        <button type="button" (click)="f2(this)">
-          <i class="fa-solid fa-bold"></i>
-          <fa-icon [icon]="faBold" ></fa-icon>
+        <button type="button" (click)="changeFontWeight()">
+          <fa-icon [icon]="faBold"></fa-icon>
         </button>
-        <button type="button" (click)="f3(this)">
-          <i class="fa-solid fa-italic"></i>
-          <fa-icon [icon]="faItalic" ></fa-icon>
+        <button type="button" (click)="changeFontWeight2()">
+          <fa-icon [icon]="faItalic"></fa-icon>
         </button>
-        <button type="button" (click)="f4(this)" >
-          <i class="fa-solid fa-underline"></i>
-          <fa-icon [icon]="faUnderline" ></fa-icon>
+        <button type="button" (click)="changeFontWeight3() ">
+          <fa-icon [icon]="faUnderline"></fa-icon>
         </button>
       </div>
-      <div class="third box">
-        <button type="button" (click)="f5(this)">
-          <fa-icon [icon]="faAlignLeft" ></fa-icon>
-        </button>
-        <button type="button" (click)="f6(this)">
-          <fa-icon [icon]="faAlignCenter" ></fa-icon>
-        </button>
-        <button type="button" (click)="f7(this)">
+            <div class="third box">
+              <button type="button" (click)="alignLeft()">
+                <fa-icon [icon]="faAlignLeft" ></fa-icon>
+              </button>
+              <button type="button" (click)="alignCenter()">
+                <fa-icon [icon]="faAlignCenter" ></fa-icon>
+              </button>
+              <button type="button" (click)="alignRight()">
+                <fa-icon [icon]="faAlignRight" ></fa-icon>
+              </button>
+            </div>
+            <div class="fourth box">
+              <button type="button" (click)="aA()">aA</button>
+              <button type="button" (click)="capitalize()">
+                <fa-icon [icon]="faTextSlash"></fa-icon>
+              </button>
+              <input type="color" (change)="color()">
+            </div>
 
-          <i class="fa-solid fa-align-right"></i>
-          <fa-icon [icon]="faAlignRight" ></fa-icon>
-        </button>
-      </div>
-      <div class="fourth box">
-        <button type="button" (click)="f8(this)">aA</button>
-        <button type="button" (click)="f9()">
-          <fa-icon [icon]="faTextSlash"></fa-icon>
-        </button>
-<!--        <input type="color" (change)="f10(this)">-->
-      </div>
     </div>
   </div>
-  <br>
   <div class="row">
     <div class="col">
-      <textarea id="textarea1" placeholder="Your text here "></textarea>
+      <textarea [ngClass]="{textarea1: bold,textarea2:italic, textarea3:underline, fontsize11:fontsize11,
+      alignLeft:alignleft, alignCenter:aligncenter, alignRight:alignright}"
+                placeholder="Your text here "
+[ngStyle]="{'font-size': fontsize11}"
+      ></textarea>
     </div>
   </div>
 </section>
